@@ -1,4 +1,4 @@
-require "~/Documents/RiverBank"
+require "./RiverBank"
 
 east = Bank.new(true,true,true,true)
 west = Bank.new(false,false,false,false)
@@ -25,7 +25,7 @@ begin
 			display(east,west)
 	when "tiger"
 		if ((east.tiger==east.farmer) || (west.tiger==west.farmer))
-			east.farmerState(opposite())
+			# east.farmerState(opposite())
 			east.farmer = !east.farmer
 			east.tiger = !east.tiger
 			west.farmer = !west.farmer
